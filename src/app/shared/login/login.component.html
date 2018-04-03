@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="login-container">
+            <div id="output"></div>
+            <div class="logo">Login</div>
+            <div class="form-box">
+                <form (ngSubmit)="onSubmit()" #newForm="ngForm">
+                    <input type="text" placeholder="Username" [(ngModel)]="model.username"
+                            #username="ngModel" name="username" required> 
+                    <input type="password" placeholder="Password" [(ngModel)]="model.password"
+                            #password="ngModel" name="password" required>                        
+                    <button class="btn btn-info btn-block login" type="submit" [disabled]="newForm.invalid" >Login</button>
+                </form>
+            </div>
+        </div>
+        
+</div>
